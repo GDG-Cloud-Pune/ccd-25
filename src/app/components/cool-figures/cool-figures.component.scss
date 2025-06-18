@@ -1,0 +1,104 @@
+.cool-figures-section {
+  font-family: sans-serif; // Basic font
+  padding: 40px 20px; // Add some horizontal padding for smaller screens
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .heading-container {
+    margin-bottom: 50px;
+    // Consider text-align: center if you want titles centered on all screen sizes
+    // text-align: center;
+
+    .main-title {
+      font-size: 3.5rem; // Adjusted slightly, can be 4rem
+      color: #31a853;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .subtitle {
+      font-size: 1.15rem; // Adjusted slightly, can be 1.25rem
+      color: #222222;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-family: "Inter", sans-serif;
+    }
+  }
+
+  .figures-grid {
+    display: flex;
+    flex-wrap: wrap; // This will allow cards to wrap to the next line
+    gap: 30px;
+    justify-content: center; // Centers cards in the row, especially if the last row isn't full
+  }
+
+  .figure-card {
+    &:hover {
+      .icon {
+        animation: rotate360 3s ease infinite;
+      }
+    }
+
+    border: 2px solid #000000;
+    border-radius: 18px;
+    overflow: hidden;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+
+    .card-number-section {
+      background-color: #f3f6f1;
+      padding: 35px 20px;
+      border-radius: 16px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .number {
+        font-size: 4.5rem; // Adjusted slightly, can be 5rem
+        color: #000000;
+        font-weight: bold;
+        line-height: 1;
+      }
+    }
+
+    .card-label-section {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .label-text {
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .icon {
+        width: 24px; // Container for SVG
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 24px; // SVG size
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}

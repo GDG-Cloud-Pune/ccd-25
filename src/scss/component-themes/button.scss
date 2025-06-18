@@ -1,0 +1,36 @@
+@mixin CCDButtonTheme() {
+  background: #f3f6f1;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  border-radius: 500px;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+@mixin CCDButtonLarge() {
+  @include CCDButtonTheme();
+  font-size: 1.3em;
+  padding: 15px 30px;
+}
+
+@mixin CCDButtonSmall() {
+  @include CCDButtonTheme();
+  font-size: 0.8em;
+  padding: 5px 10px;
+}
+
+@mixin CCDButtonWithArrow() {
+  //padding-right: 50px !important;
+}
+
+@mixin CCDButtonHover() {
+  transition: all 0.2s ease;
+  &:hover {
+    transform: translateY(-2.5px);
+  }
+}

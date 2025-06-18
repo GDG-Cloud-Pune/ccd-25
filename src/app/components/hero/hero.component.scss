@@ -1,0 +1,112 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  flex-wrap: wrap;
+  height: calc(100vh - 145px);
+
+  &.isMobile {
+    height: auto;
+
+    .hero-content {
+      .title {
+        height: 260px;
+      }
+    }
+  }
+
+  &.isTablet {
+    height: auto;
+  }
+
+  .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 32px;
+    min-width: 600px;
+    max-width: 800px;
+
+    .title {
+      height: 300px;
+    }
+
+    .subtitle {
+      font-family: "Montserrat", sans-serif;
+      font-size: 2em;
+    }
+
+    .coming-soon {
+      margin-top: 32px;
+    }
+
+    .date-container {
+      font-size: 3em;
+      font-family: "Montserrat", sans-serif;
+
+      .sub {
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+
+      .buy-tickets {
+        background: #4285f4;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    min-width: 200px;
+    max-width: 400px;
+
+    .geometric-frame {
+      height: 350px;
+      animation: moveUpDown 4s ease-in-out infinite;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-content {
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    .hero-image {
+      justify-content: center;
+      min-width: 100%;
+      max-width: 100%;
+
+      .geometric-frame {
+        margin-top: 30px;
+        height: 250px;
+      }
+    }
+  }
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}

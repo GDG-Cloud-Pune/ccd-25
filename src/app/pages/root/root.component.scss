@@ -1,0 +1,40 @@
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+
+  .mat-toolbar {
+    padding: 0;
+    background: inherit;
+  }
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  z-index: 10;
+  padding: 0;
+
+  .toolbar-wrap {
+    width: 100%;
+  }
+}
+
+main {
+  min-height: calc(100vh - 262px);
+}
+
+.bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}

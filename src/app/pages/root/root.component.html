@@ -1,0 +1,19 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav position="start" mode="over" [opened]="sideNavState()" (closed)="closeDrawer()">
+    <!--    <app-drawer></app-drawer>-->
+  </mat-sidenav>
+  <mat-sidenav-content #content>
+    <mat-toolbar color="primary">
+      <div class="toolbar-wrap">
+        <!--        <app-toolbar></app-toolbar>-->
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <!--    <app-footer></app-footer>-->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <div class="bg">
+  <app-bg-image/>
+</div> -->

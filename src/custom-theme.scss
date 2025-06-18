@@ -1,0 +1,73 @@
+@use "@angular/material" as mat;
+@import "theme";
+@import "utils";
+@import "patterns";
+
+@include mat.core();
+
+$df-23-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+      use-system-variables: true,
+    ),
+    typography: (
+      use-system-variables: true,
+    ),
+    density: (
+      scale: 0,
+    ),
+  )
+);
+
+:root {
+  @include mat.all-component-themes($df-23-theme);
+  @include mat.system-level-colors($df-23-theme); // 👈 Added
+  @include mat.system-level-typography($df-23-theme); // 👈 Added
+}
+
+html,
+body {
+  height: 100%;
+  background: mat.get-theme-color($df-23-theme, background);
+
+  * {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+}
+
+mat-sidenav-container {
+  @include sidenavContainerTheme();
+  @include scrollbar($retro-white, #000, 4px);
+}
+
+mat-sidenav {
+  @include sidenavTheme();
+}
+
+mat-toolbar {
+  @include toolbarTheme();
+}
+
+button {
+  @include CCDButtonTheme();
+  @include CCDButtonHover();
+  &.arrow {
+    @include CCDButtonWithArrow();
+  }
+
+  &.small {
+    @include CCDButtonSmall();
+  }
+
+  &.large {
+    @include CCDButtonLarge();
+  }
+}

@@ -1,0 +1,56 @@
+.venue-wrapper {
+  position: relative;
+  padding-bottom: 110px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  &.isMobile,
+  &.isTablet {
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    .title {
+      font-size: 4em;
+    }
+  }
+
+  .text {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+
+    .title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 5em;
+      color: #ea4335;
+    }
+
+    .value {
+      font-family: "Inter", sans-serif;
+      font-weight: 800;
+      font-size: 2.5em;
+    }
+
+    .action {
+      font-family: "Inter", sans-serif;
+    }
+  }
+
+  .bg-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      max-width: 550px;
+    }
+  }
+}

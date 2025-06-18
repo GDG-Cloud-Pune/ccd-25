@@ -1,0 +1,5 @@
+@import 'variables';
+
+@mixin toolbarTheme() {
+  --mat-toolbar-container-background-color: transparent;
+}

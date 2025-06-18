@@ -1,0 +1,11 @@
+@import 'variables';
+@import '../mixins/patterns';
+@import '../utils';
+
+@mixin sidenavContainerTheme() {
+  --mat-sidenav-content-background-color: transparent;
+
+}
+
+@mixin sidenavTheme() {
+}

@@ -1,0 +1,67 @@
+.video-frame {
+  width: 1600px;
+  height: 898.26px;
+  max-width: 100%; // Responsive fallback
+  margin: 2em auto;
+  background: transparent;
+  border-radius: 2em;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5em;
+
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #3a7bfd; // match Figma blue
+      margin: 0;
+    }
+  }
+
+  .video-embed {
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+    border-radius: 2em;
+    overflow: hidden;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+  }
+
+  @media (max-width: 1700px) {
+    width: 100%;
+    height: auto;
+    .video-embed {
+      height: 56vw; // 16:9 aspect ratio fallback
+      min-height: 300px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .video-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+    }
+    .video-embed {
+      height: 200px;
+    }
+  }
+}

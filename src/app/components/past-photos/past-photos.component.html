@@ -1,0 +1,14 @@
+<div class="past-photos-container">
+  <div class="photos-grid">
+    <div class="photo-card" *ngFor="let photo of photos">
+      <div class="photo-header">#CCD24 <img src="https://df24.b-cdn.net/ccd/ps_star.svg" alt=""></div>
+      <img [src]="photo.src" [alt]="photo.alt" class="photo-img" />
+      <div class="photo-footer">
+        <img src="https://df24.b-cdn.net/ccd/GDGC_Logo.svg" alt="GDG Logo" class="gdg-logo" />
+      </div>
+    </div>
+  </div>
+  <button ccd-button [showArrow]="true">Photos
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+</div> 

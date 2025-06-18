@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  //border: 2px solid #333;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+
+    .google-dev-logo {
+      //margin-left: 12px;
+    }
+
+  }
+
+  .navigation {
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 40px;
+
+      li {
+        //margin-left: 40px;
+
+        a {
+          text-decoration: none;
+          color: #333;
+          font-size: 16px;
+          font-weight: 500;
+
+          &.tickets-btn {
+            background-color: #fff;
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 8px 24px;
+            transition: all 0.2s ease;
+
+            &:hover {
+              background-color: #f8f8f8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

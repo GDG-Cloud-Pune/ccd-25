@@ -1,0 +1,29 @@
+<section class="hero" [ngClass]="{'isMobile': (isMobile$|async), 'isTablet': (isTab$|async)}">
+  <div class="hero-content">
+    <div class="title">
+      <img alt="Title" src="/assets/images/event-title.svg">
+    </div>
+
+    <div class="subtitle">
+      Learn, Build, Deploy - Together in Pune
+    </div>
+
+    <div class="date-container">
+      July 12<sup class="sub">th</sup>
+    </div>
+    <div class="actions">
+      <button ccd-button class="buy-tickets">
+        Buy Tickets
+      </button>
+      <button ccd-button>
+        Call For Speakers
+      </button>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <div class="geometric-frame">
+      <img alt="Speaker at the event" src="/assets/images/side-image.svg">
+    </div>
+  </div>
+</section>

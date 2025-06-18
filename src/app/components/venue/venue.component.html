@@ -1,0 +1,20 @@
+<div class="venue-wrapper" [ngClass]="{'isMobile': (isMobile|async), 'isTablet': (isTab|async)}">
+  <div class="text">
+    <div class="title">
+      Venue
+    </div>
+    <div class="value">
+      Hotel Tip Top International,<br>
+      Wakad, Pune
+    </div>
+    <div class="action">
+      <button ccd-button [showArrow]="true">How To get There
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+
+  </div>
+  <div class="bg-image">
+    <img src="assets/images/tip-top.png" alt="">
+  </div>
+</div>

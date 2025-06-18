@@ -1,0 +1,9 @@
+svg{
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  transform: scale(4) translate(-11%, -10%);
+  path{
+    transform-origin: center;
+  }
+}
