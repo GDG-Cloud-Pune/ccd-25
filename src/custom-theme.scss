@@ -30,7 +30,6 @@ $df-23-theme: mat.define-theme(
 
 html,
 body {
-  height: 100%;
   background: mat.get-theme-color($df-23-theme, background);
 
   * {

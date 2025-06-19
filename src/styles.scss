@@ -3,9 +3,15 @@
 * {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
-
 }
 
-body{
+body {
   background: #f3f6f1;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow: hidden;
 }

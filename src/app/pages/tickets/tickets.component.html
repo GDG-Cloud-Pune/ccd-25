@@ -1,0 +1,13 @@
+<div class="tickets-header">
+  <h1>Early Bird passes are now live!</h1>
+  <p>Catch the early bird and get your pass for lowest price possible</p>
+</div>
+<div class="tickets-container">
+  <app-ticket *ngFor="let ticket of tickets" [title]="ticket.title" [price]="ticket.price"
+    [description]="ticket.description" [link]="ticket.link"></app-ticket>
+</div>
+
+<div class="tickets-footer">
+  <p>Tickets are limited, so get yours before they run out!</p>
+  <p>For any queries regarding the tickets reach us at <strong>contact&#64;gdgcloudpune.com</strong>.</p>
+</div>

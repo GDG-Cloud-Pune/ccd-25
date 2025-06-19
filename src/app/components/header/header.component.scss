@@ -1,19 +1,25 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px 0;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background-color: #f3f6f1;
+  z-index: 1000;
   //border: 2px solid #333;
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
   .logo-container {
     display: flex;
     align-items: center;
-
-    .google-dev-logo {
-      //margin-left: 12px;
-    }
-
   }
 
   .navigation {
@@ -32,6 +38,11 @@
           color: #333;
           font-size: 16px;
           font-weight: 500;
+
+          &.active {
+            color: #4285f4;
+            border-bottom: 2px solid #4285f4;
+          }
 
           &.tickets-btn {
             background-color: #fff;

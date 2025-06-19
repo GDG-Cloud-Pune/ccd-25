@@ -1,0 +1,54 @@
+.ticket-section {
+  .ticket-card {
+    display: flex;
+    position: relative;
+    border: 2px solid #000000;
+    overflow: hidden;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+    .title {
+      font-size: 1.4em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .price {
+      font-size: 2em;
+      font-weight: bold;
+      color: #4285f4;
+      text-align: center;
+    }
+
+    .description {
+      font-size: 1em;
+      ul {
+        list-style: none;
+        padding: 3px;
+        margin: 10px 0;
+
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .buy-button {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      background-color: #4285f4;
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 500px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #3367d6;
+      }
+    }
+  }
+}

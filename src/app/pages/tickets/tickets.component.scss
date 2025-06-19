@@ -1,0 +1,37 @@
+.tickets-header {
+  text-align: center;
+  h1 {
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  p {
+    color: #666;
+    margin: 5px 0;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+.tickets-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.tickets-footer {
+  text-align: center;
+  margin-top: 50px;
+  p {
+    color: #666;
+    font-family: "Montserrat", sans-serif;
+  }
+}

@@ -1,0 +1,18 @@
+<section class="ticket-section">
+  <div class="ticket-card">
+    <div class="title">
+      <div class="text">
+        {{ title }}
+      </div>
+    </div>
+    <div class="price">
+      <p>{{price}}</p>
+    </div>
+    <div class="description">
+      <ul>
+        <li *ngFor="let item of description">{{ item }}</li>
+      </ul>
+    </div>
+    <a [href]="link" target="_blank" class="buy-button" rel="noopener noreferrer">Buy Pass</a>
+  </div>
+</section>
