@@ -17,10 +17,11 @@ export class TicketsComponent {
       description: [
         '💼 Full access to all Conference Sessions',
         '🍽️ Includes food',
-        '🎁 Exclusive Goodies',
+        '🎁 Exclusive Conference Goodies',
         '🤝 Networking opportunities with industry professionals & cloud enthusiasts',
       ],
       link: 'https://www.commudle.com/fill-form/3514',
+      soldOut: false,
     },
     {
       title: 'Early Bird - Workshop Pass',
@@ -28,10 +29,11 @@ export class TicketsComponent {
       description: [
         '👩🏻‍💻 Full access to Keynote + Workshops only',
         '🍽️ Includes food',
-        '🎁 Exclusive Goodies',
+        '🎁 Exclusive Workshop Goodies',
         '🤝 Networking opportunities with industry professionals & cloud enthusiasts',
       ],
       link: 'https://www.commudle.com/fill-form/3515',
+      soldOut: false,
     },
     {
       title: 'Early Bird - All Access Pass',
@@ -39,10 +41,11 @@ export class TicketsComponent {
       description: [
         '👩🏻‍💻 Full access to Conference + Workshops',
         '🍽️ Includes food',
-        '🎁 Exclusive Goodies',
+        '🎁 Exclusive Conference + Workshop Goodies',
         '🤝 Networking opportunities with industry professionals & cloud enthusiasts',
       ],
       link: 'https://www.commudle.com/fill-form/3517',
+      soldOut: true,
     },
   ];
 }

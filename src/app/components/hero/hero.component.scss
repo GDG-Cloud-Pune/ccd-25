@@ -4,7 +4,7 @@
   align-items: center;
   padding: 40px 0;
   flex-wrap: wrap;
-  height: calc(100vh - 145px);
+  height: calc(100vh - 60px);
 
   &.isMobile {
     height: auto;
@@ -31,7 +31,7 @@
     max-width: 800px;
 
     .title {
-      height: 300px;
+      height: 400px;
     }
 
     .subtitle {

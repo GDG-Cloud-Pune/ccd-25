@@ -6,11 +6,12 @@ import { NgFor } from '@angular/common';
   standalone: true,
   imports: [NgFor],
   templateUrl: './ticket.component.html',
-  styleUrl: './ticket.component.scss'
+  styleUrl: './ticket.component.scss',
 })
 export class TicketComponent {
   @Input() title: string = '';
   @Input() price: string = '';
   @Input() description: string[] = [];
   @Input() link: string = '';
+  @Input() soldOut: boolean = false;
 }

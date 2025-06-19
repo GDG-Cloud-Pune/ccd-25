@@ -1,16 +1,22 @@
-<header class="header">
-  <div class="header-container">
-    <div class="logo-container">
-      <div class="google-dev-logo">
-        <img alt="Google Developer Groups Cloud" height="48" src="/assets/images/GDG-Cloud-Pune-HR.svg">
+<div class="header-wrapper">
+  <header class="header" [ngClass]="{'mobile-menu-open': isMenuOpen}">
+    <div class="header-container">
+      <div class="logo-container">
+        <div class="google-dev-logo">
+          <img class="gdg-logo" alt="Google Developer Groups Cloud" height="48"
+            src="/assets/images/GDG-Cloud-Pune-HR.svg">
+        </div>
       </div>
+      <button class="hamburger-menu" (click)="toggleMenu()" *ngIf="isMobile$ | async">
+        <mat-icon>{{isMenuOpen ? 'close' : 'menu'}}</mat-icon>
+      </button>
+      <nav class="navigation" [ngClass]="{'mobile-menu': isMobile$ | async}">
+        <ul>
+          <li><a routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
+          <li><a routerLink="/tickets" routerLinkActive="active" (click)="closeMenu()">Tickets</a></li>
+          <li><a routerLink="/code-of-conduct" routerLinkActive="active" (click)="closeMenu()">Code of Conduct</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navigation">
-      <ul>
-        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="/tickets" routerLinkActive="active">Tickets</a></li>
-        <li><a routerLink="/code-of-conduct" routerLinkActive="active">Code of Conduct</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
+</div>

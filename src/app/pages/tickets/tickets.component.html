@@ -4,7 +4,7 @@
 </div>
 <div class="tickets-container">
   <app-ticket *ngFor="let ticket of tickets" [title]="ticket.title" [price]="ticket.price"
-    [description]="ticket.description" [link]="ticket.link"></app-ticket>
+    [description]="ticket.description" [link]="ticket.link" [soldOut]="ticket.soldOut"></app-ticket>
 </div>
 
 <div class="tickets-footer">

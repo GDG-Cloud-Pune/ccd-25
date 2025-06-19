@@ -13,6 +13,7 @@
         <li *ngFor="let item of description">{{ item }}</li>
       </ul>
     </div>
-    <a [href]="link" target="_blank" class="buy-button" rel="noopener noreferrer">Buy Pass</a>
+    <a [href]="!soldOut ? link : null" target="_blank" class="buy-button" [class.sold-out]="soldOut"
+      rel="noopener noreferrer">{{ soldOut ? 'Sold Out' : 'Buy Pass' }}</a>
   </div>
 </section>
