@@ -33,7 +33,7 @@ export class TicketsComponent {
         '🤝 Networking opportunities with industry professionals & cloud enthusiasts',
       ],
       link: 'https://www.commudle.com/fill-form/3515',
-      soldOut: false,
+      soldOut: true,
     },
     {
       title: 'Early Bird - All Access Pass',
