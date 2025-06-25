@@ -1,0 +1,20 @@
+<div class="sponsors-wrapper">
+  <div class="sponsor-section">
+    <h2>Event Sponsors</h2>
+    <div class="sponsor-grid">
+      <div class="sponsor-card" *ngFor="let sponsor of eventSponsors">
+        <img [src]="sponsor.logo" [alt]="sponsor.title" class="sponsor-logo" />
+        <!-- <div class="sponsor-title">{{ sponsor.title }}</div> -->
+      </div>
+    </div>
+  </div>
+  <div class="sponsor-section">
+    <h2>Workshop Sponsors</h2>
+    <div class="sponsor-grid">
+      <div class="sponsor-card" *ngFor="let sponsor of workshopSponsors">
+        <img [src]="sponsor.logo" [alt]="sponsor.title" class="sponsor-logo" />
+        <!-- <div class="sponsor-title">{{ sponsor.title }}</div> -->
+      </div>
+    </div>
+  </div>
+</div>
