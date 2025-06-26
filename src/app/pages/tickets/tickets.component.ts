@@ -12,40 +12,40 @@ import { NgFor } from '@angular/common';
 export class TicketsComponent {
   tickets = [
     {
-      title: 'Early Bird - Conference Pass',
-      price: '₹599',
+      title: 'Regular - Conference Pass',
+      price: '₹799',
       description: [
         '💼 Full access to all Conference Sessions',
         '🍽️ Includes food',
         '🎁 Exclusive Conference Goodies',
         '🤝 Networking opportunities with industry professionals & cloud enthusiasts',
       ],
-      link: 'https://www.commudle.com/fill-form/3514',
-      soldOut: true,
+      link: 'https://www.commudle.com/fill-form/3551',
+      soldOut: false,
     },
     {
-      title: 'Early Bird - Workshop Pass',
-      price: '₹899',
+      title: 'Regular - Workshop Pass',
+      price: '₹1099',
       description: [
         '👩🏻‍💻 Full access to Keynote + Workshops only',
         '🍽️ Includes food',
         '🎁 Exclusive Workshop Goodies',
         '🤝 Networking opportunities with industry professionals & cloud enthusiasts',
       ],
-      link: 'https://www.commudle.com/fill-form/3515',
-      soldOut: true,
+      link: 'https://www.commudle.com/fill-form/3552',
+      soldOut: false,
     },
     {
-      title: 'Early Bird - All Access Pass',
-      price: '₹1199',
+      title: 'Regular - All Access Pass',
+      price: '₹1399',
       description: [
         '👩🏻‍💻 Full access to Conference + Workshops',
         '🍽️ Includes food',
         '🎁 Exclusive Conference + Workshop Goodies',
         '🤝 Networking opportunities with industry professionals & cloud enthusiasts',
       ],
-      link: 'https://www.commudle.com/fill-form/3517',
-      soldOut: true,
+      link: 'https://www.commudle.com/fill-form/3553',
+      soldOut: false,
     },
   ];
 }
