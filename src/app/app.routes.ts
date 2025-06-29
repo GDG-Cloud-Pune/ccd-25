@@ -28,6 +28,6 @@ export const routes: Routes = [
   {
     path: 'speakers',
     loadComponent: () =>
-      import('./pages/speakers.component').then((m) => m.SpeakersComponent),
+      import('./pages/speakers/speakers.component').then((m) => m.SpeakersComponent),
   },
 ];

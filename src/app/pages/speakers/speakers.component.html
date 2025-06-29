@@ -1,0 +1,59 @@
+<div class="speakers-header">
+    <h1>Meet our amazing speakers!</h1>
+    <p>Stay tuned for more speaker announcements</p>
+  </div>
+  
+  <div class="speakers-container">
+    <div class="speaker-card" *ngFor="let speaker of speakers" (click)="openSpeakerDetails(speaker)">
+      <div class="speaker-image-container">
+        <div class="speaker-image-wrapper">
+          <img [src]="speaker.image" [alt]="speaker.name" class="speaker-image" />
+        </div>
+      </div>
+      <h2 class="speaker-name">{{ speaker.name }}</h2>
+      <p class="speaker-title">{{ speaker.title }}</p>
+    </div>
+  </div>
+  
+  <div class="speakers-footer">
+    <p>More speakers will be revealed soon!</p>
+    <p>For any speaker-related queries, contact us at <strong>contact&#64;gdgcloudpune.com</strong>.</p>
+  </div>
+  
+<!-- Popup Modal -->
+<div class="popup-overlay" *ngIf="selectedSpeaker" (click)="closePopup()">
+    <div class="popup-card" (click)="$event.stopPropagation()">
+      <div class="popup-header">
+        <div class="popup-image-wrapper">
+          <img [src]="selectedSpeaker.image" [alt]="selectedSpeaker.name" class="popup-image" />
+        </div>
+        <div class="popup-info">
+          <h2>{{ selectedSpeaker.name }}</h2>
+          <p class="popup-title">{{ selectedSpeaker.title }}</p>
+          <div class="about-text" [class.collapsed]="!isAboutExpanded">
+            <p>{{ selectedSpeaker.about }}</p>
+          </div>
+          <!-- Show Read More/Read Less button only if about text is long -->
+          <span *ngIf="isAboutLong" class="toggle-btn" (click)="toggleAbout()">
+            {{ isAboutExpanded ? ' Read Less' : ' Read More' }}
+          </span>
+  
+          <div class="social-icons">
+            <a *ngIf="selectedSpeaker.socials.linkedin" [href]="selectedSpeaker.socials.linkedin" target="_blank" aria-label="LinkedIn">
+              <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" />
+            </a>
+            <a *ngIf="selectedSpeaker.socials.github" [href]="selectedSpeaker.socials.github" target="_blank" aria-label="GitHub">
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+            </a>
+            <a *ngIf="selectedSpeaker.socials.instagram" [href]="selectedSpeaker.socials.instagram" target="_blank" aria-label="Instagram">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="popup-footer">
+        <button class="close-btn" (click)="closePopup()">Close</button>
+      </div>
+    </div>
+  </div>
