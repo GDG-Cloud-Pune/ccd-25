@@ -11,44 +11,44 @@ import { CommonModule } from '@angular/common';
 export class SpeakersComponent {
   speakers = [
     {
-      name: 'John Doe',
-      title: 'CEO, TechCorp',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwXRsEwpFFX0OKKI2dQwdnS3hsLq_2Bogf2g&s',
-      location: 'San Francisco, USA',
-      about: 'John is a seasoned tech entrepreneur with over 15 years of experience. He has built multiple startups and enjoys mentoring young talent. His vision is to democratize technology and create impact-driven solutions.',
+      name: 'Abhishek Sharma',
+      title: 'A Senior Cloud & DevOps Engineer, Google Developer Expert(GCP) & Google Cloud Champions Innovator(Hybrid/Multi-Cloud), Cloud Advisor & Mentor, Public Speaker & Content Creator',
+      image: '/assets/speakers/Abhishek_Sharma.JPG',
+      location: 'Mumbai, Maharashtra, India',
+      about: 'Abhishek has a proven track record of driving digital transformation. He specializes in architecting and implementing scalable cloud solutions on Google Cloud, leveraging his expertise in DevOps, observability, and cloud security tools such as Docker, Kubernetes, Terraform, ArgoCD, Prometheus, Mimir, Tempo, Grafana, Checkov, Kyverno, Prisma Cloud, and Gitlab CI. Abhishek optimizes development pipelines, strengthens SRE & platform engineering practices, and ensures robust security standards to empower organizations to achieve their goals. His innovative solutions and thought leadership have earned him recognition as a leading expert in the cloud community.',
       socials: {
-        twitter: 'https://twitter.com/johndoe',
-        linkedin: 'https://linkedin.com/in/johndoe',
+        twitter: 'https://x.com/acloudpotato',
+        linkedin: 'https://www.linkedin.com/in/acloudpotato/',
         github: '',
-        instagram: 'https://instagram.com/johndoe'
+        instagram: 'https://www.instagram.com/shy_honour/?__d=1'
       }
     },
     {
-      name: 'Jane Smith',
-      title: 'CTO, InnovateX',
-      image: 'https://static.vecteezy.com/system/resources/thumbnails/052/754/088/small/attractive-blonde-german-model-in-a-black-jersey-against-a-white-background-stop-racism-stop-homophobia-free-photo.jpeg',
-      location: 'New York, USA',
-      about: 'Jane leads cutting-edge product teams and specializes in cloud infrastructure. She is passionate about technology and inclusive leadership.',
+      name: 'Bhavesh Bhatt',
+      title: 'AVP Generative-AI at IDFC FIRST Bank, GDE in ML, GitHub Star, 40 Under 40 Data Scientist',
+      image: '/assets/speakers/Bhavesh_Bhatt.jpeg',
+      location: 'Mumbai, Maharashtra, India',
+      about: 'Bhavesh is an AVP Generative-AI at IDFC FIRST Bank & he enjoys solving problems. In his Data Science journey so far, he has had the honour of becoming a Google Developer Expert (GDE) in Machine Learning, GitHub Star & also being recognized as a 40 Under 40 Data Scientist by Analytics India Magazine. He recently received the Best AI/ML product of the year at Cypher 2022.',
       socials: {
         twitter: '',
-        linkedin: 'https://linkedin.com/in/janesmith',
-        github: 'https://github.com/janesmith',
+        linkedin: 'https://www.linkedin.com/in/bhattbhavesh91',
+        github: 'https://bhattbhavesh91.github.io/',
         instagram: ''
       }
-    },
-    {
-      name: 'Jane Smith',
-      title: 'CTO, InnovateX',
-      image: 'https://static.vecteezy.com/system/resources/thumbnails/036/755/376/small/ai-generated-portrait-of-beautiful-young-woman-with-clean-fresh-skin-spa-healthcare-photo.jpg',
-      location: 'New York, USA',
-      about: 'Jane leads cutting-edge product teams and specializes in cloud infrastructure. She is passionate about technology and inclusive leadership.',
-      socials: {
-        twitter: '',
-        linkedin: 'https://linkedin.com/in/janesmith',
-        github: 'https://github.com/janesmith',
-        instagram: ''
-      }
-    }
+    }//,
+    // {
+    //   name: 'Jane Smith',
+    //   title: 'CTO, InnovateX',
+    //   image: 'https://static.vecteezy.com/system/resources/thumbnails/036/755/376/small/ai-generated-portrait-of-beautiful-young-woman-with-clean-fresh-skin-spa-healthcare-photo.jpg',
+    //   location: 'New York, USA',
+    //   about: 'Jane leads cutting-edge product teams and specializes in cloud infrastructure. She is passionate about technology and inclusive leadership.',
+    //   socials: {
+    //     twitter: '',
+    //     linkedin: 'https://linkedin.com/in/janesmith',
+    //     github: 'https://github.com/janesmith',
+    //     instagram: ''
+    //   }
+    // }
     // You can add more speakers here...
   ];
 
