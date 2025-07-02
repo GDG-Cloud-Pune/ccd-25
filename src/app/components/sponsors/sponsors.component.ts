@@ -16,6 +16,7 @@ export class SponsorsComponent {
     { title: 'Couchbase', logo: '/assets/sponsors/couchbase-logo.png' },
     { title: 'Solace', logo: '/assets/sponsors/solace-logo.png' },
     { title: 'LoftLabs', logo: '/assets/sponsors/loftlabs-logo.png' },
+    {title: 'vCluster', logo: '/assets/sponsors/vCluster_Horizontal_2colors.svg' },
     { title: 'neo4j', logo: '/assets/sponsors/neo4j-logo.png' },
   ];
 }
