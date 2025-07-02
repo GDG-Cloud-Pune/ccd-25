@@ -12,7 +12,7 @@ export class SpeakersComponent {
   speakers = [
     {
       name: 'Abhishek Sharma',
-      title: 'A Senior Cloud & DevOps Engineer, Google Developer Expert(GCP) & Google Cloud Champions Innovator(Hybrid/Multi-Cloud), Cloud Advisor & Mentor, Public Speaker & Content Creator',
+      title: 'Google Developer Expert - Google Cloud , Senior Cloud Engineer@Searce Inc , Cloud-Native & Multi-Cloud Advisor , Organiser@GDG Cloud Mumbai & ElasticUG , Founder@Guys In The Cloud , Tech Speaker , Content Creator , A Cloud Potato',
       image: '/assets/speakers/Abhishek_Sharma.JPG',
       location: 'Mumbai, Maharashtra, India',
       about: 'Abhishek has a proven track record of driving digital transformation. He specializes in architecting and implementing scalable cloud solutions on Google Cloud, leveraging his expertise in DevOps, observability, and cloud security tools such as Docker, Kubernetes, Terraform, ArgoCD, Prometheus, Mimir, Tempo, Grafana, Checkov, Kyverno, Prisma Cloud, and Gitlab CI. Abhishek optimizes development pipelines, strengthens SRE & platform engineering practices, and ensures robust security standards to empower organizations to achieve their goals. His innovative solutions and thought leadership have earned him recognition as a leading expert in the cloud community.',
