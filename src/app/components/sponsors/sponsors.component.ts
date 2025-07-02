@@ -9,6 +9,9 @@ import { NgFor } from '@angular/common';
   styleUrl: './sponsors.component.scss',
 })
 export class SponsorsComponent {
+  titleSponsors = [
+    {title: 'Google Developers' , logo:'/assets/sponsors/developers.png'}
+  ]
   eventSponsors = [
     { title: 'Weights & Biases', logo: '/assets/sponsors/wandb-logo.png' },
   ];
