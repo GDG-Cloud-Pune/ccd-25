@@ -19,8 +19,8 @@ export class TeamsComponent {
   volunteers = [
     { name: 'Aarya Anekar', image: 'assets/teams/Aarya Anekar.jpg' },
     { name: 'Amaan Shikalgar', image: 'assets/teams/Amaan Shikalgar.jpg' },
-    { name: 'Disha Gole', image: 'assets/teams/Disha Gole.jpeg' },
+    { name: 'Disha Gole', image: 'assets/teams/Disha Gole.jpg' },
     { name: 'Jyotiraditya Pise', image: 'assets/teams/Jyotiraditya Pise.jpg' },
-    { name: 'Lavanya Moolya', image: 'assets/teams/Lavanya Moolya.jpeg '}
+    { name: 'Lavanya Moolya', image: 'assets/teams/Lavanya Moolya.jpg '}
   ];
 }
