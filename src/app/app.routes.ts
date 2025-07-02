@@ -30,4 +30,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/speakers/speakers.component').then((m) => m.SpeakersComponent),
   },
+  {
+    path: 'teams',
+    loadComponent: () =>
+      import('./pages/teams/teams.component').then((m) => m.TeamsComponent),
+  },
+
 ];
