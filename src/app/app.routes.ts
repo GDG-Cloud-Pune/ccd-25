@@ -29,5 +29,10 @@ export const routes: Routes = [
     path: 'speakers',
     loadComponent: () =>
       import('./pages/speakers/speakers.component').then((m) => m.SpeakersComponent),
+  },,
+  {
+    path: 'schedule',
+    loadComponent: () =>
+      import('./pages/schedule/schedule.component').then((m) => m.ScheduleComponent),
   },
 ];

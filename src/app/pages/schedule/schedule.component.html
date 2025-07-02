@@ -1,0 +1,25 @@
+<div class="schedule-header">
+  <h1>Schedule</h1>
+  <p>Check out the schedule below and don't forget to mark your calendar so that you don't miss out on any sessions.</p>
+</div>
+
+<div class="schedule-list">
+  <div *ngFor="let event of schedule" class="schedule-row">
+    <div class="schedule-time">
+      <span class="start-time">{{ event.startTime }}</span>
+      <span class="to-text">to</span>
+      <span class="end-time">{{ event.endTime }}</span>
+    </div>
+
+    <div class="schedule-content">
+      <h3>{{ event.title }}</h3>
+
+      <div *ngIf="event.speaker" class="schedule-speaker">
+        <a [href]="event.speakerUrl" target="_blank">
+          <img [src]="event.speakerImage" alt="{{ event.speaker }}" />
+          <span>{{ event.speaker }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
