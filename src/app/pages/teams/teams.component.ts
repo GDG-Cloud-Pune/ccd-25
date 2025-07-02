@@ -17,10 +17,10 @@ export class TeamsComponent {
   ];
 
   volunteers = [
-    { name: 'Aarya Anekar', image: 'assets/teams/Aarya Anekar.jpg' },
-    { name: 'Amaan Shikalgar', image: 'assets/teams/Amaan Shikalgar.jpg' },
-    { name: 'Disha Gole', image: 'assets/teams/Disha Gole.jpg' },
-    { name: 'Jyotiraditya Pise', image: 'assets/teams/Jyotiraditya Pise.jpg' },
-    { name: 'Lavanya Moolya', image: 'assets/teams/Lavanya Moolya.jpg '}
+    { name: 'Aarya Anekar', image: 'assets/teams/Aarya_Anekar.jpg' },
+    { name: 'Amaan Shikalgar', image: 'assets/teams/Amaan_Shikalgar.jpg' },
+    { name: 'Disha Gole', image: 'assets/teams/Disha_Gole.jpg' },
+    { name: 'Jyotiraditya Pise', image: 'assets/teams/Jyotiraditya_Pise.jpg' },
+    { name: 'Lavanya Moolya', image: 'assets/teams/Lavanya_Moolya.jpg '}
   ];
 }
