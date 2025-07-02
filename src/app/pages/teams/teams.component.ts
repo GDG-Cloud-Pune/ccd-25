@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class TeamsComponent {
   organizers = [
     { name: 'Antrixsh Gupta', image: 'assets/teams/antrixsh_gupta.JPG' },
-    { name: 'Shailesh Chaskar', image: 'assets/teams/shailesh2.jpg' },
+    { name: 'Shailesh Chaskar', image: 'assets/teams/shailesh2.jpeg' },
     { name: 'Pratik Kale', image: 'assets/teams/pratik2.jpg' },
     { name: 'Dnyanada Mahajan', image: 'assets/teams/dnyanda2.jpg' },
   ];
