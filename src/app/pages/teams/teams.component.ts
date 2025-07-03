@@ -20,7 +20,7 @@ export class TeamsComponent {
    { name: 'Aarya Anekar', image: 'assets/teams/Aarya_Anekar.jpg' },
 { name: 'Amaan Shikalgar', image: 'assets/teams/Amaan_Shikalgar.jpg' },
 { name: 'Anuja Mukherjee', image: 'assets/teams/Anuja_Mukherjee.png' },
-{ name: 'Chinmay', image: 'assets/teams/Chinmay.png' },
+{ name: 'Chinmay Bhalerao', image: 'assets/teams/Chinmay.png' },
 { name: 'Disha Gole', image: 'assets/teams/Disha_Gole.jpg' },
 { name: 'Gitesh Mahadik', image: 'assets/teams/Gitesh_Mahadik.png' },
 { name: 'Ishan Deshpande', image: 'assets/teams/Ishan_Deshpande.png' },
