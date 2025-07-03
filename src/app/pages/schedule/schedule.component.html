@@ -4,7 +4,7 @@
 </div>
 
 <div class="schedule-list">
-  <div *ngFor="let event of schedule" class="schedule-row">
+  <div *ngFor="let event of schedule; let i = index" [ngClass]="'schedule-row color-' + (i % 4 + 1)">
     <div class="schedule-time">
       <span class="start-time">{{ event.startTime }}</span>
       <span class="to-text">to</span>

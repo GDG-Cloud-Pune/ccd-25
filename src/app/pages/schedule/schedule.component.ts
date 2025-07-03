@@ -10,16 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ScheduleComponent {
   schedule = [
-    {
-      startTime: '07:00 AM',
-      endTime: '09:00 AM',
-      title: 'Registration'
-    },
-    {
-      startTime: '09:00 AM',
-      endTime: '09:10 AM',
-      title: 'Welcome Note'
-    },
+    { startTime: '07:00 AM', endTime: '09:00 AM', title: 'Registration' },
+    { startTime: '09:00 AM', endTime: '09:10 AM', title: 'Welcome Note' },
     {
       startTime: '09:10 AM',
       endTime: '09:30 AM',
@@ -35,7 +27,6 @@ export class ScheduleComponent {
       speaker: 'Arun Teja Godavarthi',
       speakerImage: 'https://cdn.create.vista.com/api/media/small/56347297/stock-photo-beautiful-young-black-woman-smiling',
       speakerUrl: 'https://google.com'
-    },
-    // Add more schedule items here
+    }
   ];
 }

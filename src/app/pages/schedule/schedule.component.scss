@@ -1,7 +1,14 @@
+// Color Themes
+$colors: (
+  color-1: #4285F4,
+  color-2: #33A852,
+  color-3: #F9AA00,
+  color-4: #EA4335
+);
+
 .schedule-header {
   text-align: center;
   margin-bottom: 40px;
-  padding: 0 1rem;
 
   h1 {
     font-family: 'Montserrat', sans-serif;
@@ -22,6 +29,18 @@
   }
 }
 
+.background-theme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%, #e3f2fd, transparent 400px),
+              radial-gradient(circle at 80% 30%, #fce4ec, transparent 400px),
+              radial-gradient(circle at 50% 80%, #e8f5e9, transparent 400px);
+  z-index: -1;
+}
+
 .schedule-list {
   display: flex;
   flex-direction: column;
@@ -32,17 +51,19 @@
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 30px;
+  gap: 20px;
+  border-radius: 12px;
+  position: relative;
 
   .schedule-time {
-    background-color: #f1f4f9;
+    background-color: #f9f9f9;
     border-radius: 12px;
-    padding: 20px 30px;
-    min-width: 140px;
+    padding: 15px 20px; // ⬅️ keep inner padding
+    min-width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
 
     .start-time,
     .to-text,
@@ -55,9 +76,9 @@
   }
 
   .schedule-content {
-    background-color: #f1f4f9;
+    background-color: #f9f9f9;
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px; // ⬅️ keep inner padding
     flex: 1;
 
     h3 {
@@ -95,6 +116,16 @@
   }
 }
 
+// Apply Theme Colors
+@each $name, $color in $colors {
+  .#{$name} .schedule-time {
+    border: 0.8px solid $color;
+  }
+  .#{$name} .schedule-content {
+    border-left: 4px solid $color;
+  }
+}
+
 /* Tablet View */
 @media (max-width: 768px) {
 
@@ -112,12 +143,9 @@
   }
 
   .schedule-row {
-    align-items: stretch;
-    gap: 20px;
+    gap: 15px;
 
     .schedule-time {
-      padding: 15px 20px;
-
       .start-time,
       .to-text,
       .end-time {
@@ -126,16 +154,12 @@
     }
 
     .schedule-content {
-      padding: 15px;
-
       h3 {
-        font-size: 0.9rem;
-        font-weight: 500;
+        font-size: 1rem;
       }
 
       .schedule-speaker a span {
         font-size: 1rem;
-        font-weight: 500;
       }
     }
   }
@@ -147,54 +171,40 @@
   .schedule-list {
     gap: 15px;
   }
-  .schedule-header h1 {
-    font-size: 1.4rem;
-  }
-
-  .schedule-header p {
-    font-size: 0.8rem;
-    max-width: 90%;
-  }
 
   .schedule-row {
     flex-direction: row;
-    align-items: stretch; 
+    align-items: stretch;
     gap: 10px;
-  
+
     .schedule-time {
-      display: flex; 
+      display: flex;
       flex-direction: column;
-      justify-content: center; 
-      align-items: center;
+      justify-content: center; // vertical center
+      align-items: center;     // horizontal center
       text-align: center;
       padding: 8px 10px;
-      min-width: 90px; 
-      max-width: 90px;
-      gap: 4px;
-  
+      min-width: 80px;
+      max-width: 80px;
+
       .start-time,
       .to-text,
       .end-time {
-        font-size: 0.7rem; 
+        font-size: 0.65rem;
       }
     }
-  
+
     .schedule-content {
-      display: flex; 
+      display: flex;
       flex-direction: column;
-      justify-content: center; 
-      align-items: start; 
-      text-align: start; 
-      padding: 15px;
-  
+      justify-content: center;
+
       h3 {
-        font-size: 0.8rem;
-        font-weight: 500;
+        font-size: 0.75rem;
       }
-  
+
       .schedule-speaker a span {
-        font-size: 0.7rem;
-        font-weight: 400;
+        font-size: 0.65rem;
       }
     }
   }
