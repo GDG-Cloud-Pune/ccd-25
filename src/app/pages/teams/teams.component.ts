@@ -54,7 +54,7 @@ export class TeamsComponent {
 { name: 'Vihaa Terkar', image: 'assets/teams/Vihaa_Terkar.png' },
 { name: 'Yash Bade', image: 'assets/teams/Yash_Bade.png' },
 { name: 'Yash Gwalvanshi', image: 'assets/teams/Yash_Gwalvanshi.png' },
-{ name: 'Yash Khope', image: 'assets/teams/Yash_Khope.png' },
+{ name: 'Yash Khope', image: 'assets/teams/Yash_Khope.PNG' },
 { name: 'Yash Londhe', image: 'assets/teams/Yash_Londhe.png' }
 
 ];
