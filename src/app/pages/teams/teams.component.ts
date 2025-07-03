@@ -38,6 +38,7 @@ export class TeamsComponent {
 { name: 'Sanika Kotgire', image: 'assets/teams/Sanika_kotgire.png' },
 { name: 'Sarah Khambatta', image: 'assets/teams/Sarah_Khambatta.png' },
 { name: 'Saurabh Renge', image: 'assets/teams/Saurabh_Renge.png' },
+{ name: 'Shravanee Kulkarni', image: 'assets/teams/Shravanee_Kulkarni.jpg' },
 { name: 'Shivam Awasare', image: 'assets/teams/Shivam_Awasare.png' },
 { name: 'Siddhi Soni', image: 'assets/teams/Siddhi_Soni.PNG' },
 { name: 'Snehal Yelwande', image: 'assets/teams/Snehal_Yelwande.png' },
