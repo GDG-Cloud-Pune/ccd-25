@@ -134,10 +134,12 @@ export class PhotoFrameComponent implements OnInit {
       }
 
       if (this.framedImageDataUrl) {
-        const downloadLink = document.createElement("a");
-        downloadLink.href = this.framedImageDataUrl;
-        downloadLink.download = "cloud_community_days_frame.png";
-        downloadLink.click();
+        // Mobile-optimized download approach
+        if (this.isMobileDevice()) {
+          await this.downloadForMobile(this.framedImageDataUrl);
+        } else {
+          await this.downloadForDesktop(this.framedImageDataUrl);
+        }
       } else {
         this.showError(
           "Failed to generate image. Please check the frame image and try again.",
@@ -145,6 +147,7 @@ export class PhotoFrameComponent implements OnInit {
       }
     } catch (error) {
       this.showError("Failed to download the image. Please try again.");
+      console.error("Download error:", error);
     }
   }
 
@@ -154,8 +157,6 @@ export class PhotoFrameComponent implements OnInit {
       `🚀 Excited to attend Cloud Community Days Pune 2025! ☁️
 
 The biggest cloud event in our city! Can't wait to connect with fellow cloud enthusiasts and learn from industry experts. 💻🌟
-
-If you're passionate about cloud computing, this is THE event to be at! 🔥
 
 Join me: ${registrationLink} 🎯
 
@@ -173,13 +174,23 @@ Join me: ${registrationLink} 🎯
       }
 
       if (this.framedImageDataUrl) {
-        this.onDownload();
-        setTimeout(() => {
-          window.open(
-            `https://twitter.com/intent/tweet?text=${caption}`,
-            "_blank",
+        // For mobile devices, use Web Share API if available
+        if (this.isMobileDevice() && navigator.share) {
+          await this.shareViaNativeAPI(
+            "Twitter",
+            caption,
+            this.framedImageDataUrl,
           );
-        }, 500);
+        } else {
+          // Fallback to traditional approach
+          await this.onDownload();
+          setTimeout(() => {
+            window.open(
+              `https://twitter.com/intent/tweet?text=${caption}`,
+              "_blank",
+            );
+          }, 1000); // Increased delay for mobile
+        }
       } else {
         this.showError(
           "Failed to generate image for sharing. Please try again.",
@@ -187,6 +198,7 @@ Join me: ${registrationLink} 🎯
       }
     } catch (error) {
       this.showError("Failed to share on X. Please try again.");
+      console.error("Share X error:", error);
     }
   }
 
@@ -215,13 +227,23 @@ Ready to join me? Register now: ${registrationLink} 🎯
       }
 
       if (this.framedImageDataUrl) {
-        this.onDownload();
-        setTimeout(() => {
-          window.open(
-            `https://www.linkedin.com/feed/?shareActive=true&text=${caption}`,
-            "_blank",
+        // For mobile devices, use Web Share API if available
+        if (this.isMobileDevice() && navigator.share) {
+          await this.shareViaNativeAPI(
+            "LinkedIn",
+            caption,
+            this.framedImageDataUrl,
           );
-        }, 500);
+        } else {
+          // Fallback to traditional approach
+          await this.onDownload();
+          setTimeout(() => {
+            window.open(
+              `https://www.linkedin.com/feed/?shareActive=true&text=${caption}`,
+              "_blank",
+            );
+          }, 1000); // Increased delay for mobile
+        }
       } else {
         this.showError(
           "Failed to generate image for sharing. Please try again.",
@@ -229,6 +251,7 @@ Ready to join me? Register now: ${registrationLink} 🎯
       }
     } catch (error) {
       this.showError("Failed to share on LinkedIn. Please try again.");
+      console.error("Share LinkedIn error:", error);
     }
   }
 
@@ -254,7 +277,10 @@ Ready to join me? Register now: ${registrationLink} 🎯
       }
 
       const designedAspectRatio = 2 / 3;
-      const pixelRatio = window.devicePixelRatio || 1;
+      // Use lower pixel ratio for mobile to avoid memory issues
+      const pixelRatio = this.isMobileDevice()
+        ? Math.min(window.devicePixelRatio || 1, 2)
+        : window.devicePixelRatio || 1;
 
       const canvasWidth = 800 * pixelRatio;
       const canvasHeight = canvasWidth / designedAspectRatio;
@@ -328,12 +354,13 @@ Ready to join me? Register now: ${registrationLink} 🎯
 
       ctx.drawImage(frameImg, 0, 0, effectiveWidth, effectiveHeight);
 
-      this.framedImageDataUrl = canvas.toDataURL("image/png", 1.0);
+      // Use higher quality for final output
+      this.framedImageDataUrl = canvas.toDataURL("image/png", 0.95);
     } catch (error) {
       this.showError(
         "Failed to generate image. Please ensure the frame image is accessible and try again.",
       );
-      console.error(error);
+      console.error("Generate framed image error:", error);
       this.framedImageDataUrl = null;
     }
   }
@@ -362,8 +389,124 @@ Ready to join me? Register now: ${registrationLink} 🎯
     }
   }
 
+  private isMobileDevice(): boolean {
+    return (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      ) ||
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0
+    );
+  }
+
+  private async downloadForMobile(dataUrl: string): Promise<void> {
+    try {
+      // Convert data URL to blob for better mobile compatibility
+      const response = await fetch(dataUrl);
+      const blob = await response.blob();
+
+      // Create object URL
+      const blobUrl = URL.createObjectURL(blob);
+
+      // Create download link with proper attributes for mobile
+      const downloadLink = document.createElement("a");
+      downloadLink.href = blobUrl;
+      downloadLink.download = "cloud_community_days_frame.png";
+      downloadLink.style.display = "none";
+
+      // Add to DOM temporarily
+      document.body.appendChild(downloadLink);
+
+      // Trigger download with user interaction
+      downloadLink.click();
+
+      // Clean up
+      setTimeout(() => {
+        document.body.removeChild(downloadLink);
+        URL.revokeObjectURL(blobUrl);
+      }, 100);
+    } catch (error) {
+      console.error("Mobile download error:", error);
+      // Fallback to desktop method
+      await this.downloadForDesktop(dataUrl);
+    }
+  }
+
+  private async downloadForDesktop(dataUrl: string): Promise<void> {
+    const downloadLink = document.createElement("a");
+    downloadLink.href = dataUrl;
+    downloadLink.download = "cloud_community_days_frame.png";
+    downloadLink.click();
+  }
+
+  private async shareViaNativeAPI(
+    platform: string,
+    text: string,
+    imageDataUrl: string,
+  ): Promise<void> {
+    try {
+      // Convert data URL to blob for native sharing
+      const response = await fetch(imageDataUrl);
+      const blob = await response.blob();
+      const file = new File([blob], "cloud_community_days_frame.png", {
+        type: "image/png",
+      });
+
+      if (navigator.share) {
+        await navigator.share({
+          title: `Cloud Community Days Pune 2025 - ${platform}`,
+          text: decodeURIComponent(text),
+          files: [file],
+        });
+      } else {
+        // Fallback to download + manual share
+        await this.onDownload();
+        this.showError(
+          `Image downloaded! Please manually share it on ${platform}.`,
+        );
+      }
+    } catch (error) {
+      console.error("Native share error:", error);
+      // Fallback to download + manual share
+      await this.onDownload();
+      this.showError(
+        `Image downloaded! Please manually share it on ${platform}.`,
+      );
+    }
+  }
+
   private showError(message: string) {
-    alert(message);
+    // Use a more mobile-friendly error display
+    if (this.isMobileDevice()) {
+      // Create a custom toast-like error message
+      const errorDiv = document.createElement("div");
+      errorDiv.textContent = message;
+      errorDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ff4444;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        z-index: 9999;
+        font-size: 14px;
+        max-width: 90%;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      `;
+
+      document.body.appendChild(errorDiv);
+
+      setTimeout(() => {
+        if (errorDiv.parentNode) {
+          errorDiv.parentNode.removeChild(errorDiv);
+        }
+      }, 4000);
+    } else {
+      alert(message);
+    }
     console.error(message);
   }
 
