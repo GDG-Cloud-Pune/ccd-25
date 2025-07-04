@@ -35,20 +35,20 @@ export class SpeakersComponent {
         github: 'https://bhattbhavesh91.github.io/',
         instagram: ''
       }
-    }//,
-    // {
-    //   name: 'Jane Smith',
-    //   title: 'CTO, InnovateX',
-    //   image: 'https://static.vecteezy.com/system/resources/thumbnails/036/755/376/small/ai-generated-portrait-of-beautiful-young-woman-with-clean-fresh-skin-spa-healthcare-photo.jpg',
-    //   location: 'New York, USA',
-    //   about: 'Jane leads cutting-edge product teams and specializes in cloud infrastructure. She is passionate about technology and inclusive leadership.',
-    //   socials: {
-    //     twitter: '',
-    //     linkedin: 'https://linkedin.com/in/janesmith',
-    //     github: 'https://github.com/janesmith',
-    //     instagram: ''
-    //   }
-    // }
+    },
+    {
+      name: 'Siddhant Agarwal',
+      title: 'Developer Relations Lead APAC - Neo4j, GDE- GenAI, Ex-Google, Open, Beahead, IBM , ACM DSP , Google for Startups Accelerator Mentor',
+      image: '/assets/speakers/Siddhant_Agarwal.png',
+      location: 'Bengaluru, Karnataka, India',
+      about: 'Sid Agarwal, currently leading Developer Communities for APAC at Neo4j. Formerly, He pioneered India first fintech community as the Developer Relations Lead at Open Financial Technologies. Prior to that, he spearheaded community efforts as a Program Manager with Google Developer Relations team in India, overseeing programs like Developer Student Clubs, TensorFlow User Groups, Google Developer Groups, and Google Developer Experts. In 2019, he collaborated with the Ministry of Electronics & Information Technology, Government of India, to launch Build for Digital India, engaging 7,000+ students in solving India challenges.He is passionate about design thinking and enjoy mentoring startups to enhance their UX and designs. Recognized as one of ACM Distinguished Speakers, his career of roughly a decade is dedicated to building, scaling, and growing communities in India, launching ed-tech initiatives, fostering design innovation, and contributing to the startup ecosystem.',
+      socials: {
+        twitter: '',
+        linkedin: 'https://linkedin.com/in/sidagarwal04',
+        github: 'https://medium.com/@sidagarwal04',
+        instagram: ''
+      }
+    }
     // You can add more speakers here...
   ];
 
