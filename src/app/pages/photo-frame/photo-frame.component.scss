@@ -1,0 +1,242 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  color: #202124;
+  margin: 0;
+}
+.container {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+}
+.subtitle {
+  color: #4285f4;
+  margin-bottom: 30px;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+.frame-container {
+  position: relative;
+  width: min(90vw, 400px);
+  aspect-ratio: 2 / 3;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-image {
+  position: absolute;
+  top: 5.3%;
+  left: 1.25%;
+  width: 97.5%;
+  height: 89.2%;
+  object-fit: cover;
+  z-index: 1;
+  cursor: move;
+  transition: transform 0.1s ease;
+}
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.btn {
+  margin: 6px;
+  padding: 10px 15px;
+  color: white;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: clamp(0.875rem, 3vw, 1rem);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  touch-action: manipulation;
+  background: none;
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    &:hover {
+      opacity: 0.6;
+      transform: none;
+    }
+  }
+  &.btn-primary {
+    background-color: #4285f4;
+  }
+  &.btn-success {
+    background-color: #34a853;
+  }
+  &.btn-x {
+    background-color: #000000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding: 0;
+    .btn-icon {
+      margin-right: 0;
+      height: 20px;
+      width: 20px;
+    }
+  }
+  &.btn-linkedin {
+    background-color: #0077b5;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding: 0;
+    .btn-icon {
+      margin-right: 0;
+      height: 20px;
+      width: 20px;
+    }
+  }
+  &.btn-warning {
+    background-color: #fbbc05;
+    color: #202124;
+  }
+}
+.btn .btn-icon {
+  margin-right: 4px;
+  height: 18px;
+  width: 18px;
+}
+input[type="file"] {
+  display: none;
+}
+.placeholder {
+  position: absolute;
+  top: 5.3%;
+  left: 1.25%;
+  width: 97.5%;
+  height: 89.2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f3f4;
+  z-index: 1;
+  border-radius: 4px;
+  font-size: clamp(0.875rem, 3vw, 1rem);
+  color: #5f6368;
+}
+.controls {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.share-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.share-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+}
+.share-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.steps-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.step-number {
+  background-color: #4285f4;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+.step-text {
+  font-size: clamp(0.875rem, 3vw, 1rem);
+  margin-right: 20px;
+}
+.usage-tip {
+  background-color: #e8f0fe;
+  border: 1px solid #4285f4;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 15px auto 0;
+  font-size: 0.9rem;
+  color: #1a73e8;
+  max-width: 480px;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .frame-container {
+    width: 100%;
+  }
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  .share-options {
+    flex-direction: row;
+    align-items: center;
+  }
+  .btn {
+    width: 80%;
+    max-width: 150px;
+  }
+  .btn-x,
+  .btn-linkedin {
+    width: 48px;
+    height: 48px;
+  }
+  .step {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .step-text {
+    margin-right: 0;
+  }
+  .usage-tip {
+    max-width: 100%;
+    font-size: 0.6rem;
+  }
+}
