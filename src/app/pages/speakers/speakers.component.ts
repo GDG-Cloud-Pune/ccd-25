@@ -91,7 +91,7 @@ export class SpeakersComponent {
   {
     "name": "Pranoti Nandurkar",
     "title": "Solution Architect at TCS ,  WTM Ambassador",
-    "image": "/assets/speakers/Pranoti_Nandurkar .jpeg",
+    "image": "/assets/speakers/Pranoti_Nandurkar.jpeg",
     "location": "Noida , Uttar Pradesh, India",
     "about": "She Understands the power of Google Generative AI models.* How Vertex AI enables easy access and fine-tuning of these models. * Practical applications of Generative AI (text, image, code generation).* Building custom Generative AI agents with Vertex AI Agent Builder.",
     "socials": {
