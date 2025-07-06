@@ -89,6 +89,19 @@ export class SpeakersComponent {
     }
   },
   {
+    "name": "Mayur Vaid",
+    "title": "Software Engineer III at Google",
+    "image": "/assets/speakers/Mayur_Vaid.jpeg",
+    "location": "Noida , Uttar Pradesh, India",
+    "about": "Mayur Vaid, working as Software Engineer at Google while sharing the details about the workshop Building AI Apps in Minutes with Firebase Studio and Genkit.",
+    "socials": {
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/mayur-vaid-5422b8171/",
+      "github": "https://www.linkedin.com/in/mayur-vaid-5422b8171/",
+      "instagram": ""
+    }
+  },
+  {
     "name": "Pranoti Nandurkar",
     "title": "Solution Architect at TCS ,  WTM Ambassador",
     "image": "/assets/speakers/Pranoti_Nandurkar.jpeg",
