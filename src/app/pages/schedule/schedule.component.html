@@ -18,7 +18,6 @@
     <div *ngIf="!item.isTabs && (!item.type || item.type === selectedType)" [ngClass]="'schedule-row color-' + (i % 4 + 1)">
       <div class="schedule-time">
         <span class="start-time">{{ item.startTime }}</span>
-        <span class="to-text">to</span>
         <span class="end-time">{{ item.endTime }}</span>
       </div>
 
