@@ -63,19 +63,6 @@ export class SpeakersComponent {
     }
   },
   {
-    "name": "Biswanath Giri",
-    "title": "Cloud & AI  Principal Architect  at LTIMindtree ",
-    "image": "/assets/speakers/Biswanath_Giri.jpeg",
-    "location": "Noida , Uttar Pradesh, India",
-    "about": "He is a Google Cloud  & AI Principal Architect with over 6 years of experience as a Google Cloud Solution Architect and a total of 16 years in the IT industry. As a self-motivated and results-driven professional, he specialize in designing and implementing cutting-edge cloud solutions, with a focus on Cloud Networking, Security, and migration strategies from on-premises to the cloud. His expertise spans across IT infrastructure, managed services, and multi-cloud environments, leveraging my certifications in GCP, AWS, Azure, and Terraform Associate.  In addition to his technical roles, He is passionate about knowledge sharing and community building. I have trained over 10,000 students and professionals in cloud technologies and AI, empowering them to excel in their careers. He actively contribute to the Google Cloud community by creating technical content, producing video tutorials, and collaborating with peers to foster growth and innovation in the cloud ecosystem.  His mission is to drive digital transformation through scalable, secure, and efficient cloud solutions while inspiring and educating the next generation of cloud professionals.",
-    "socials": {
-      "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/biswanathgiri",
-      "github": "https://www.linkedin.com/in/biswanathgiri",
-      "instagram": ""
-    }
-  },
-  {
     "name": "Hrittik Roy",
     "title": "Platform Advocate at Loft Labs and a CNCF Ambassador",
     "image": "/assets/speakers/Hritik.JPG",
