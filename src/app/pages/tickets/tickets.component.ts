@@ -21,7 +21,7 @@ export class TicketsComponent {
         '🤝 Networking opportunities with industry professionals & cloud enthusiasts',
       ],
       link: 'https://www.commudle.com/fill-form/3551',
-      soldOut: false,
+      soldOut: true,
     },
     {
       title: 'Regular - Workshop Pass',
@@ -33,7 +33,7 @@ export class TicketsComponent {
         '🤝 Networking opportunities with industry professionals & cloud enthusiasts',
       ],
       link: 'https://www.commudle.com/fill-form/3552',
-      soldOut: false,
+      soldOut: true,
     },
     {
       title: 'Regular - All Access Pass',
@@ -45,7 +45,7 @@ export class TicketsComponent {
         '🤝 Networking opportunities with industry professionals & cloud enthusiasts',
       ],
       link: 'https://www.commudle.com/fill-form/3553',
-      soldOut: false,
+      soldOut: true,
     },
   ];
 }
