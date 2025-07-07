@@ -141,6 +141,19 @@ export class SpeakersComponent {
     }
   },
   {
+    "name": "Siddhant Jain",
+    "title": "Product Manager @ Google , Firebase Remote Config",
+    "image": "/assets/speakers/Siddhant_photo.jpg",
+    "location": "Bengaluru, Karnataka, India",
+    "about": "Siddhant is currently shaping developer-facing products and tools at Google, focusing on improving the developer experience. He is an alumnus of ISB, building a strong foundation in business and management. With a broad and active professional network, he is well-connected across the tech and product management communities. ",
+    "socials": {
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/siddhant-jain-5a15a183/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "github": "https://www.linkedin.com/in/siddhant-jain-5a15a183/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "instagram": ""
+    }
+  },
+  {
     "name": "Shivay Lamba",
     "title": "Developer Experience Engineer At Couchbase",
     "image": "/assets/speakers/ShivayLamba.jpeg",
@@ -150,6 +163,32 @@ export class SpeakersComponent {
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/shivaylamba/",
       "github": "https://www.linkedin.com/in/shivaylamba/",
+      "instagram": ""
+    }
+  },
+  {
+    "name": "Toshal Khawale",
+    "title": "Managing Director - PwC , Cloud Transformation , Application Modernisation , Digital Transformation",
+    "image": "/assets/speakers/Toshal_Khawale.png",
+    "location": "Noida , Uttar Pradesh, India",
+    "about": "Toshal Khawale is a seasoned engineering leader with over 21 years of experience in Cloud and DevOps. Currently serving as Director – Product Owner (Cloud & DevOps) at Pwc., he has previously held senior roles such as Vice President – Engineering Manager at JPMorgan Chase & Co.He specializes in cloud platforms (AWS, Azure, Google Cloud), container orchestration, and modern DevOps practices. Toshal is also an AWS Community Builder, an active speaker at community events across India, and a mentor helping professionals grow in cloud-native careers.Based in Pune, India, he is passionate about sharing knowledge, driving community engagement, and building scalable cloud solutions.",
+    "socials": {
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/toshal-khawale/",
+      "github": "https://www.linkedin.com/in/toshal-khawale/",
+      "instagram": ""
+    }
+  },
+  {
+    "name": "Venkatesan Giri",
+    "title": "Architect & EDA Evangelist",
+    "image": "/assets/speakers/Giri_Venkatesan.jpeg",
+    "location": "Noida , Uttar Pradesh, India",
+    "about": "Giri Venkatesan is a seasoned Architect & Developer Advocate at Solace. He has extensive expertise in integration technologies, APIs, Microservices and event-driven architecture (EDA). With decades of experience, Giri has contributed to the evolution of enterprise integration from traditional EAI (Enterprise Application Integration) and B2B integration models to modern-day microservices and EDA. With his current focus on GenAI and application of AI in event-driven systems, he is both a proponent and learner around the trends in this space.",
+    "socials": {
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/girivenkatesan/",
+      "github": "https://www.linkedin.com/in/girivenkatesan/",
       "instagram": ""
     }
   },
