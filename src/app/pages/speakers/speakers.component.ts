@@ -142,7 +142,7 @@ export class SpeakersComponent {
   },
   {
     "name": "Siddhant Jain",
-    "title": "Product Manager DevX @ Google",
+    "title": "Product Manager @ Google , Firebase Remote Config",
     "image": "/assets/speakers/Siddhant_photo.jpg",
     "location": "Bengaluru, Karnataka, India",
     "about": "Siddhant is currently shaping developer-facing products and tools at Google, focusing on improving the developer experience. He is an alumnus of ISB, building a strong foundation in business and management. With a broad and active professional network, he is well-connected across the tech and product management communities. ",
