@@ -43,5 +43,10 @@ export const routes: Routes = [
     path: 'teams',
     loadComponent: () =>
       import('./pages/teams/teams.component').then((m) => m.TeamsComponent),
+  },,
+  {
+    path: 'schedule',
+    loadComponent: () =>
+      import('./pages/schedule/schedule.component').then((m) => m.ScheduleComponent),
   },
 ];

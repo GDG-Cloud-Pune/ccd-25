@@ -1,0 +1,51 @@
+<div class="schedule-header">
+  <h1>Schedule</h1>
+  <p>Check out the schedule below and don't forget to mark your calendar so that you don't miss out on any sessions.</p>
+</div>
+
+<div class="schedule-list">
+  <ng-container *ngFor="let item of orderedSchedule; let i = index">
+    
+    <!-- Render Tabs -->
+    <div *ngIf="item.isTabs" class="tab-list">
+      <div
+        class="tab"
+        *ngFor="let type of availableTypes"
+        [class.active]="selectedType === type"
+        (click)="selectSchedule(type)">
+        {{ type | titlecase }}
+      </div>
+    </div>
+
+    <!-- Render Schedule Items -->
+    <div
+      *ngIf="!item.isTabs && (!item.type || item.type === selectedType)"
+      [ngClass]="'schedule-row color-' + (i % 4 + 1)">
+      
+      <div class="schedule-time">
+        <span class="start-time">{{ item.startTime }}</span>
+        <span class="end-time">{{ item.endTime }}</span>
+      </div>
+
+      <div class="schedule-content">
+        <h3>{{ item.title }}</h3>
+
+        <!-- Speaker List: horizontal, image + name side by side -->
+        <div *ngIf="item.speakers?.length" class="schedule-speakers-row">
+          <div
+            *ngFor="let speaker of item.speakers"
+           >
+            <a [href]="speaker.url"  class="schedule-speaker-inline" target="_blank">
+              <img
+                *ngIf="speaker.image"
+                [src]="speaker.image"
+                [alt]="speaker.name"
+                class="speaker-image" />
+              <span class="speaker-name">{{ speaker.name }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
