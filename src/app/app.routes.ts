@@ -28,12 +28,25 @@ export const routes: Routes = [
   {
     path: 'speakers',
     loadComponent: () =>
-      import('./pages/speakers/speakers.component').then((m) => m.SpeakersComponent),
+      import('./pages/speakers/speakers.component').then(
+        (m) => m.SpeakersComponent
+      ),
+  },
+  {
+    path: 'badge',
+    loadComponent: () =>
+      import('./pages/photo-frame/photo-frame.component').then(
+        (m) => m.PhotoFrameComponent
+      ),
   },
   {
     path: 'teams',
     loadComponent: () =>
       import('./pages/teams/teams.component').then((m) => m.TeamsComponent),
+  },,
+  {
+    path: 'schedule',
+    loadComponent: () =>
+      import('./pages/schedule/schedule.component').then((m) => m.ScheduleComponent),
   },
-
 ];
