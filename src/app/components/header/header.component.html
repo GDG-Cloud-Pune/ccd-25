@@ -13,7 +13,8 @@
       <nav class="navigation" [ngClass]="{'mobile-menu': isMobile$ | async}">
         <ul>
           <li><a routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
-          <li><a routerLink="/tickets" routerLinkActive="active" (click)="closeMenu()">Tickets</a></li>
+          <li><a routerLink="/schedule" routerLinkActive="active" (click)="closeMenu()">Agenda</a></li>
+          <!-- <li><a routerLink="/tickets" routerLinkActive="active" (click)="closeMenu()">Tickets</a></li> -->
           <li><a routerLink="/speakers" routerLinkActive="active" (click)="closeMenu()">Speaker</a></li>
           <li><a routerLink="/badge" routerLinkActive="active" (click)="closeMenu()">Badge</a></li>
           <li><a routerLink="/teams" routerLinkActive="active" (click)="closeMenu()">Team</a></li>

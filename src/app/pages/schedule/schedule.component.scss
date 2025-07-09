@@ -99,7 +99,7 @@ $colors: (
         align-items: center;
         text-decoration: none;
         color: #4285F4;
-
+        
         img {
           width: 40px;
           height: 40px;
@@ -165,7 +165,22 @@ $colors: (
     }
   }
 }
+.schedule-speaker-inline {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  justify-content: center;
+  text-decoration: none;
+  
+.speaker-name {
 
+  color: #3366cc;
+  font-size: 1.1rem;
+      font-weight: 500;
+      
+}
+}
 
 /* Tablet View */
 @media (max-width: 768px) {
@@ -261,4 +276,31 @@ $colors: (
     font-size: 0.9rem;
     padding: 10px 0;
   }
+
+  .speaker-name {
+
+  
+  font-size: 0.8rem !important; 
+      
+      
 }
+
+}
+
+.schedule-speakers-row {
+  display: flex;
+  flex-wrap: wrap; // allows wrapping on small screens
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+
+
+.speaker-image {
+  width: 48px; /* Slightly bigger */
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
